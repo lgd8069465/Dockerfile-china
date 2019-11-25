@@ -1,0 +1,7 @@
+FROM alpine
+MAINTAINER 1071858797@qq.com
+RUN echo "http://mirrors.aliyun.com/alpine/v3.8/main" > /etc/apk/repositories && \
+    echo "http://mirrors.aliyun.com/alpine/v3.8/community" >> /etc/apk/repositories && \
+    apk update && \
+    apk add --no-cache rsyslog
+ENTRYPOINT ["rsyslogd","-n","-f","/etc/rsyslog.conf"]

@@ -1,0 +1,4 @@
+FROM python:latest
+MAINTAINER 1071858797@qq.com
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple/ pip -U && \
+    pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/

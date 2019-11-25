@@ -1,0 +1,4 @@
+FROM golang:latest
+MAINTAINER 1071858797@qq.com
+RUN export GO111MODULE=on && \
+    export GOPROXY=https://mirrors.aliyun.com/goproxy/

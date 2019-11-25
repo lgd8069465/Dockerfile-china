@@ -1,0 +1,7 @@
+FROM ruby:latest
+MAINTAINER 1071858797@qq.com
+RUN gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/ && \
+    gem install bundle && \
+    bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems/ && \
+    cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo 'Asia/Shanghai' > /etc/timezone

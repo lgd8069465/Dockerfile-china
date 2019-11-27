@@ -1,4 +1,5 @@
 FROM nginx:alpine
 MAINTAINER 1071858797@qq.com
-RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo 'Asia/Shanghai' > /etc/timezone
+ENV TIMEZONE=Asia/Shanghai
+RUN cp -f /usr/share/zoneinfo/$TIMEZONE /etc/localtime && \
+    echo "$TIMEZONE" > /etc/timezone

@@ -1,3 +1,4 @@
 FROM composer:latest
 MAINTAINER 1071858797@qq.com
-RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+ENV MIRROR=https://mirrors.aliyun.com/composer/
+RUN composer config -g repo.packagist composer $MIRROR

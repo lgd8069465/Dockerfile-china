@@ -1,5 +1,0 @@
-FROM node:latest
-MAINTAINER 1071858797@qq.com
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org && \
-    cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo 'Asia/Shanghai' > /etc/timezone

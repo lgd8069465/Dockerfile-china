@@ -1,4 +1,0 @@
-FROM perl:latest
-MAINTAINER 1071858797@qq.com
-RUN curl -L https://cpanmin.us | perl - --self-upgrade https://mirrors.aliyun.com/CPAN/ && \
-    cpanm Test::More --mirror https://mirrors.aliyun.com/CPAN/ --mirror-only

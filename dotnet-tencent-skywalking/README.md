@@ -1,7 +1,7 @@
-# rust-ustc
+# dotnet-tencent-skywalking
 
 This is test Dockerfile
 
-https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates
+https://github.com/SkyAPM/SkyAPM-dotnet
 
 [Licensed under the GNU General Public License, Version 3](http://www.gnu.org/licenses/gpl-3.0.html)

@@ -1,5 +1,0 @@
-FROM ruby:latest
-MAINTAINER 1071858797@qq.com
-RUN gem sources --add https://mirrors.aliyun.com/rubygems/ --remove https://rubygems.org/ && \
-    gem install bundle && \
-    bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems/

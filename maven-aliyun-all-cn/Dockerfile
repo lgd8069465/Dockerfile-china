@@ -1,0 +1,125 @@
+FROM maven:latest
+MAINTAINER 1071858797@qq.com
+ENV TIMEZONE=Asia/Shanghai
+RUN sed -i '/<mirrors>/a                                               \
+allprojects {                                                          \
+    repositories {                                                     \
+        maven { url 'https://maven.aliyun.com/repository/public/' }    \
+        mavenLocal()                                                   \
+        mavenCentral()                                                 \
+    }                                                                  \
+}                                                                      \
+' /usr/share/maven/conf/settings.xml &&                                \
+    sed -i '/<profiles/a\<repository>                                  \
+    <id>spring</id>                                                    \
+    <url>https://maven.aliyun.com/repository/spring</url>              \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>apache-snapshots</id>                                          \
+    <url>https://maven.aliyun.com/repository/apache-snapshots</url>    \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>central</id>                                                   \
+    <url>https://maven.aliyun.com/repository/central</url>             \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>google</id>                                                    \
+    <url>https://maven.aliyun.com/repository/google</url>              \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>gradle-plugin</id>                                             \
+    <url>https://maven.aliyun.com/repository/gradle-plugin</url>       \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>jcenter</id>                                                   \
+    <url>https://maven.aliyun.com/repository/jcenter</url>             \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>spring-plugin</id>                                             \
+    <url>https://maven.aliyun.com/repository/spring-plugin</url>       \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>releases</id>                                                  \
+    <url>https://maven.aliyun.com/repository/releases</url>            \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>snapshots</id>                                                 \
+    <url>https://maven.aliyun.com/repository/snapshots</url>           \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>grails-core</id>                                               \
+    <url>https://maven.aliyun.com/repository/grails-core</url>         \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+<repository>                                                           \
+    <id>mapr-public</id>                                               \
+    <url>https://maven.aliyun.com/repository/mapr-public</url>         \
+    <releases>                                                         \
+        <enabled>true</enabled>                                        \
+    </releases>                                                        \
+    <snapshots>                                                        \
+        <enabled>true</enabled>                                        \
+    </snapshots>                                                       \
+</repository>                                                          \
+' /usr/share/maven/conf/settings.xml &&                                \
+    cp -f /usr/share/zoneinfo/$TIMEZONE /etc/localtime &&              \
+    echo "$TIMEZONE" > /etc/timezone

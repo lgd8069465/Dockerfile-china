@@ -1,4 +1,4 @@
-FROM maven:latest
+FROM maven:alpine
 MAINTAINER 1071858797@qq.com
 RUN sed -i '/<mirrors>/a                                               \
 allprojects {                                                          \

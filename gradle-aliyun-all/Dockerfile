@@ -1,4 +1,4 @@
-FROM gradle:latest
+FROM gradle:alpine
 MAINTAINER 1071858797@qq.com
 RUN touch /home/gradle/.gradle/init.gradle &&                                 \
     echo "allprojects {                                                       \

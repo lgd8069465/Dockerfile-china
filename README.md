@@ -13,7 +13,7 @@ docker pull lvguodong/alpine-aliyun:latest
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://mdqtcrqi.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://mdqtcrqi.mirror.aliyuncs.com","https://docker.mirrors.ustc.edu.cn/","https://mirror.ccs.tencentyun.com"]
 }
 EOF
 sudo systemctl daemon-reload

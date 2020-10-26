@@ -1,7 +1,5 @@
-FROM node:latest
-MAINTAINER 1071858797@qq.com
-ENV MIRROR=https://registry.npm.taobao.org
+FROM lvguodong/node-aliyun:latest
+LABEL maintainer="1071858797@qq.com"
 ENV TIMEZONE=Asia/Shanghai
-RUN npm install -g cnpm --registry=$MIRROR && \
-    cp -f /usr/share/zoneinfo/$TIMEZONE /etc/localtime && \
+RUN cp -f /usr/share/zoneinfo/$TIMEZONE /etc/localtime && \
     echo "$TIMEZONE" > /etc/timezone

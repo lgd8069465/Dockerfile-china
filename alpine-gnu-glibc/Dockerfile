@@ -1,5 +1,5 @@
 FROM lvguodong/wget:latest
-MAINTAINER 1071858797@qq.com
+LABEL maintainer="1071858797@qq.com"
 ENV glibc_version=2.30-r0
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${glibc_version}/glibc-${glibc_version}.apk && \

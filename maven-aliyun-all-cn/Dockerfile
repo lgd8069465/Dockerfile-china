@@ -1,5 +1,5 @@
 FROM maven:latest
-MAINTAINER 1071858797@qq.com
+LABEL maintainer="1071858797@qq.com"
 ENV TIMEZONE=Asia/Shanghai
 RUN sed -i '/<mirrors>/a                                               \
 allprojects {                                                          \

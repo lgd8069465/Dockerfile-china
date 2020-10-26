@@ -1,5 +1,5 @@
 FROM gradle:latest
-MAINTAINER 1071858797@qq.com
+LABEL maintainer="1071858797@qq.com"
 RUN touch /home/gradle/.gradle/init.gradle &&                           \
     echo "allprojects {                                                 \
     repositories {                                                      \

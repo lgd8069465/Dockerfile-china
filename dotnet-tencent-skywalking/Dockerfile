@@ -1,5 +1,5 @@
 FROM lvguodong/dotnet-tencent:latest
-MAINTAINER 1071858797@qq.com
+LABEL maintainer="1071858797@qq.com"
 ENV SERVICENAME=sample_app
 ENV BACKEND_SERVICES=192.168.0.1:11800
 RUN cd sampleweb && \	

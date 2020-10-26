@@ -1,5 +1,5 @@
 FROM rust:alpine
-MAINTAINER 1071858797@qq.com
+LABEL maintainer="1071858797@qq.com"
 ENV GLIBC_VERSION=2.30-r0
 ENV TARGET_VERSION=1.40.0-x86_64-unknown-linux-gnu
 RUN sed -i "s/http:\/\/dl-cdn.alpinelinux.org/https:\/\/mirrors.aliyun.com/g" /etc/apk/repositories && \

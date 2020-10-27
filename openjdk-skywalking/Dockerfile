@@ -1,7 +1,7 @@
 FROM lvguodong/curl:latest as download
 LABEL maintainer="1071858797@qq.com"
 ARG SKYWALKING_VERSION=6.5.0
-RUN curl -o /skywalking.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/skywalking/${SKYWALKING_VERSION}/apache-skywalking-apm-${SKYWALKING_VERSION}.tar.gz && \
+RUN curl -o /skywalking.tar.gz https://archive.apache.org/dist/skywalking/${SKYWALKING_VERSION}/apache-skywalking-apm-${SKYWALKING_VERSION}.tar.gz && \
     tar zxf /skywalking.tar.gz
 FROM openjdk:latest
 LABEL maintainer="1071858797@qq.com"

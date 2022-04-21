@@ -1,4 +1,4 @@
 FROM node:alpine
 LABEL maintainer="1071858797@qq.com"
-ENV MIRROR=https://registry.npm.taobao.org
+ENV MIRROR=https://registry.npmmirror.com
 RUN npm install -g cnpm --registry=$MIRROR
